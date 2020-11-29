@@ -16,7 +16,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel.bakeryModel.observe(this, Observer { text -> updateBakeryText(text) })
+        viewModel.frostingModel.observe(this, Observer { text -> updateFrostingText(text) })
         viewModel.bake()
+        viewModel.frost(this)
+    }
+
+    private fun updateFrostingText(text: String) {
+        findViewById<TextView>(R.id.frosting_text).text = text
     }
 
     private fun updateBakeryText(text: String) {
