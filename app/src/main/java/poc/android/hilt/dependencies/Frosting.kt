@@ -6,7 +6,7 @@ import dagger.hilt.EntryPoints
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 
-class Frosting private constructor(private val flavour: Flavour) {
+class Frosting private constructor(val flavour: Flavour) {
 
     @EntryPoint
     @InstallIn(ActivityComponent::class)
