@@ -1,28 +1,26 @@
 package poc.android.hilt
 
 import android.content.Context
-import android.os.Build
 import androidx.hilt.work.HiltWorkerFactory
 import androidx.test.core.app.ApplicationProvider
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.work.ListenableWorker
 import androidx.work.testing.TestListenableWorkerBuilder
-import dagger.hilt.android.testing.*
+import dagger.hilt.android.testing.BindValue
+import dagger.hilt.android.testing.HiltAndroidRule
+import dagger.hilt.android.testing.HiltAndroidTest
+import dagger.hilt.android.testing.UninstallModules
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.annotation.Config
 import poc.android.hilt.dependencies.Frosting
 import poc.android.hilt.di.FrostingModule
+import poc.android.hilt.di.MixerModule
 import javax.inject.Inject
 
 @HiltAndroidTest
-@Config(sdk = [Build.VERSION_CODES.P], application = HiltTestApplication::class)
-@UninstallModules(FrostingModule::class)
-@RunWith(AndroidJUnit4::class)
+@UninstallModules(FrostingModule::class, MixerModule::class)
 class BakeryWorkerTest {
 
     @get:Rule

@@ -16,7 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'poc.android.hilt.HiltTestRunner'
     }
 
     buildTypes {
@@ -33,7 +33,7 @@ android {
         jvmTarget = '1.8'
     }
     defaultConfig {
-        testInstrumentationRunner "poc.android.hilt.HiltTestRunner"
+        testInstrumentationRunner 'poc.android.hilt.HiltTestRunner'
     }
 }
 
@@ -58,15 +58,14 @@ dependencies {
     implementation 'androidx.hilt:hilt-work:1.0.0-alpha02'
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
 
-    // Hilt instrumented tests
-    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.29.1-alpha'
-    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.29.1-alpha'
-
     // Worker test
     testImplementation 'androidx.work:work-testing:2.4.0'
     androidTestImplementation 'androidx.work:work-testing:2.4.0'
 
+    // Hilt instrumented tests
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.29.1-alpha'
+    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.29.1-alpha'
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'org.robolectric:robolectric:4.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
