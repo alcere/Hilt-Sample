@@ -4,7 +4,7 @@ Hilt is the latest attempt from Google to standardize Dagger usage for dependenc
 Generally speaking, having dome Dagger knowledge would make it easier understanding how to use Hilt, and more importantly, how it works, but it is not a requirement at all.
 
 This repository shows how to configure Hilt in an Android project from zero.
-# Respository structure
+# Repository structure
 The code is structured in the following way:
 - **root**: Android classes to serve as the consumer of dependencies: Activity, ViewModel, and WorkManager.
 - **dependencies**: the set of classes that will provide basic functionality defined by an abstraction. We can also find some concrete implementations adding a particular behavior; we would use this to modify the abstraction's behavior according to the scenario: test or 'production.' These classes work as a dependency and as a consumer of dependencies.
