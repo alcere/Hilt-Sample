@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        BakeryWorker.enqueueUpdate(applicationContext)
+        BakeryWorkManager.enqueueUpdate(applicationContext)
         viewModel.bakeryModel.observe(this, Observer { text -> updateBakeryText(text) })
         viewModel.frostingModel.observe(this, Observer { text -> updateFrostingText(text) })
         viewModel.bake()

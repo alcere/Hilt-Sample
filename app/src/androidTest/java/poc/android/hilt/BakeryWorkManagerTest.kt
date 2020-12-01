@@ -21,7 +21,7 @@ import javax.inject.Inject
 
 @HiltAndroidTest
 @UninstallModules(FrostingModule::class, MixerModule::class)
-class BakeryWorkerTest {
+class BakeryWorkManagerTest {
 
     @get:Rule
     var hiltRule = HiltAndroidRule(this)
@@ -43,7 +43,7 @@ class BakeryWorkerTest {
 
     @Test
     fun `Test_work_manager_success`() {
-        val worker = TestListenableWorkerBuilder<BakeryWorker>(
+        val worker = TestListenableWorkerBuilder<BakeryWorkManager>(
             context
         ).setWorkerFactory(workerFactory).build()
         val result = worker.startWork().get()

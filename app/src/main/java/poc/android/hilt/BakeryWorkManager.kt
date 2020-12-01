@@ -8,7 +8,7 @@ import androidx.work.*
 import poc.android.hilt.dependencies.Frosting
 import java.util.concurrent.TimeUnit
 
-class BakeryWorker @WorkerInject constructor(
+class BakeryWorkManager @WorkerInject constructor(
     @Assisted appContext: Context,
     @Assisted workerParams: WorkerParameters,
     private val creamProducer: Frosting
@@ -30,7 +30,7 @@ class BakeryWorker @WorkerInject constructor(
         }
 
         private fun createRequest(): OneTimeWorkRequest {
-            return OneTimeWorkRequestBuilder<BakeryWorker>()
+            return OneTimeWorkRequestBuilder<BakeryWorkManager>()
                 .setConstraints(constraints)
                 .setBackoffCriteria(
                     BackoffPolicy.EXPONENTIAL,
