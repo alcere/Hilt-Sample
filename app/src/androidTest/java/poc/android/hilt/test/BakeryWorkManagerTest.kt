@@ -1,4 +1,4 @@
-package poc.android.hilt
+package poc.android.hilt.test
 
 import android.content.Context
 import androidx.hilt.work.HiltWorkerFactory
@@ -14,6 +14,7 @@ import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import poc.android.hilt.BakeryWorkManager
 import poc.android.hilt.dependencies.Frosting
 import poc.android.hilt.di.FrostingModule
 import poc.android.hilt.di.MixerModule

@@ -1,8 +1,6 @@
-package poc.android.hilt
+package poc.android.hilt.dependencies
 
 import dagger.hilt.android.scopes.ActivityScoped
-import poc.android.hilt.dependencies.Appliance
-import poc.android.hilt.dependencies.Mixer
 import javax.inject.Inject
 
 @ActivityScoped

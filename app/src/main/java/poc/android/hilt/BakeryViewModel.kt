@@ -5,6 +5,7 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import poc.android.hilt.dependencies.CakeProducer
 import poc.android.hilt.dependencies.Frosting
 
 class BakeryViewModel @ViewModelInject constructor(

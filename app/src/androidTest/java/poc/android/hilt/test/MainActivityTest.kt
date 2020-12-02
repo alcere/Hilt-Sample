@@ -1,6 +1,5 @@
-package poc.android.hilt
+package poc.android.hilt.test
 
-import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers.withId
@@ -13,6 +12,9 @@ import dagger.hilt.android.testing.UninstallModules
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.RuleChain
+import poc.android.hilt.dependencies.CakeProducer
+import poc.android.hilt.MainActivity
+import poc.android.hilt.R
 import poc.android.hilt.dependencies.Appliance
 import poc.android.hilt.dependencies.Microwave
 import poc.android.hilt.dependencies.QuickMixer
@@ -21,7 +23,7 @@ import poc.android.hilt.di.MixerModule
 
 @HiltAndroidTest
 @UninstallModules(MixerModule::class, ApplianceModule::class)
-class BakeryActivityTest {
+class MainActivityTest {
 
     private var hiltRule = HiltAndroidRule(this)
 
