@@ -1,7 +1,7 @@
 # Hilt-Sample
 Hilt is the latest attempt from Google to standardize Dagger usage for dependency injection in Android, and it feels like a complete success.
 
-Generally speaking, having dome Dagger knowledge would make it easier understanding how to use Hilt, and more importantly, how it works, but it is not a requirement at all.
+Generally speaking, having some Dagger knowledge would make it easier understanding how to use Hilt, and more importantly, how it works, but it is not a requirement at all.
 
 This repository shows how to configure Hilt in an Android project from zero.
 # Repository structure
@@ -17,4 +17,4 @@ The repo also includes some basic instrumented test to go through this scenario 
 # Resources
 - 📖. [A pragmatic guide to Hilt with Kotlin](https://medium.com/androiddevelopers/a-pragmatic-guide-to-hilt-with-kotlin-a76859c324a1)
 - 📖. [Official Android documentation](https://developer.android.com/training/dependency-injection/hilt-android)
-- 📼. [Hilt Dependecy Injextion](https://www.youtube.com/watch?v=B56oV3IHMxg)
+- 📼. [Hilt Dependecy Injection](https://www.youtube.com/watch?v=B56oV3IHMxg)
